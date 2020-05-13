@@ -4,7 +4,7 @@ Wilson Mongwe and Rendani Mbuvha
 
 Experiments with Nested Sampling and Gaussian Approximation on benchmark datasets
 
-To exexute
+To execute
 
 ```bash
 ./run_all.sh
