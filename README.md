@@ -1,6 +1,8 @@
 # ANN Nested Sampling
 
-Experiments with with Nested Sampling and Gaussian Approximation
+Wilson Mongwe and Rendani Mbuvha
+
+Experiments with Nested Sampling and Gaussian Approximation on benchmark datasets
 
 To exexute
 
