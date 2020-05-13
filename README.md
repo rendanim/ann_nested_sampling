@@ -7,7 +7,16 @@ Experiments with Nested Sampling and Gaussian Approximation on benchmark dataset
 To execute
 
 ```bash
-source nsamp/bin/activate
+python3 -m venv nsamp3
+
+source nsamp3/bin/activate
+
+pip3 install numpy
+pip3 install sklearn
+pip3 install pandas
+pip3 install dynesty
+pip3 install xlrd
+
 ```
  Then  run...
 
