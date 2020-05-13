@@ -9,6 +9,7 @@ To execute
 ```bash
 source nsamp/bin/activate
 ```
+ Then  run...
 
 ```bash
 ./run_all.sh
