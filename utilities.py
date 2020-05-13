@@ -3,7 +3,6 @@ import pandas as pd
 import sklearn
 import scipy.special
 from sklearn.model_selection import train_test_split
-import tensorflow as tf
 from sklearn import datasets
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, MinMaxScaler
 from sklearn import metrics
@@ -350,25 +349,6 @@ def return_power_processed_data():
     X_scaled = scaler.fit_transform(X)
     
     x_train,x_test,y_train,y_test = train_test_split(X_scaled,y,test_size = 0.3,random_state = 1)
-    
-    return x_train, y_train, x_test, y_test
-
-def return_mnist_processed_data():
-    # the data, split between train and test sets
-    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data(path='mnist.npz')
-    x_train = x_train.reshape(60000, 784)
-    x_test =  x_test.reshape(10000, 784)
-    x_train =x_train.astype('float32')
-    x_test = x_test.astype('float32')
-    x_train /= 255
-    x_test /= 255
-    
-    # convert class vectors to binary class matrices
-    num_classes = 10
-    y_train = tf.keras.utils.to_categorical(y_train, num_classes)
-    y_test = tf.keras.utils.to_categorical(y_test, num_classes)
-    y_train = np.reshape(y_train, (60000,num_classes))
-    y_test = np.reshape(y_test, (10000,num_classes))
     
     return x_train, y_train, x_test, y_test
 

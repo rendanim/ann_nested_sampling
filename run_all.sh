@@ -1,7 +1,5 @@
 #! /bin/bash
-source nsamp/bin/activate
-echo 'Environment activated'
-#
+
 echo 'Running Yatch'
 
 python3 main_yacht_v2.py         

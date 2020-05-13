@@ -7,5 +7,9 @@ Experiments with Nested Sampling and Gaussian Approximation on benchmark dataset
 To execute
 
 ```bash
+source nsamp/bin/activate
+```
+
+```bash
 ./run_all.sh
 ```
