@@ -10,7 +10,7 @@ from multiprocessing import Pool, cpu_count
 import concurrent.futures
 import numpy as np
 
-ITERATIONS = 20000
+ITERATIONS = 25000
 
 # the data, split between train and test sets
 random.seed(1)
@@ -35,7 +35,7 @@ mse_file_name = r'mse_concrete.csv'
 
 #Store results
 x_axis = range(1, 31, 1) # Number of hidden units
-sims = range(1, 11, 1) # How many times to run the simulations
+sims = range(1, 16, 1) # How many times to run the simulations
 
 #Architecture for mlp
 input_neurons = x_train.shape[1] # inputs
@@ -119,7 +119,7 @@ def run_sims(s):
     return end - start
 
 def main():
-    
+    '''
     for s  in sims:
         print("\n SIMULATION NUMBER :::::::::::::::::::::", s, "::::::::::::::::::::::::\n")
         output1 = list()
@@ -141,10 +141,11 @@ def main():
     
         end = datetime.now()
         print("\n Time Taken:::", end - start)
+    '''
         
-    #with concurrent.futures.ThreadPoolExecutor() as executor:
-       # for time in executor.map(run_sims, sims):
-           # print("Time taken for arbitrary sim",time)
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        for time in executor.map(run_sims, sims):
+            print("Time taken for arbitrary sim",time)
             
 
 if __name__ == '__main__':
